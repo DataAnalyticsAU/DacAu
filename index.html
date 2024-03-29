@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anurag University Data Analytics Club</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for styling -->
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!-- D3.js library -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    
+
+<!-- Header Section -->
+<header>
+    <div class="logo-container"><br><br>
+        
+        <!-- Responsive Navigation -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="navbar">
+            <div class="nav-dropdown" id="navDropdown">
+                <ul class="nav-list" id="navList">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#About_Us">About Us</a></li>
+                    <li><a href="#Faculty Co-ordinators">Faculty Co-ordinators</a></li>
+                    <li><a href="#Sr-Team">Team</a></li>
+                    <li><a href="#Collaborations">Collaborations</a></li>
+                    <li class="dropdown-item">
+                        <a href="#Previous Events">Previous Events</a>
+                        <ul class="sub-nav-list">
+                            <li><a href="#DATA NARRATIVES (2K23)">DATA NARRATIVES (2K23)</a></li>
+                            <li><a href="#WORKSHOP ON DATASCIENCE TOOLS AND EXCEL">WORKSHOP ON DATASCIENCE TOOLS AND EXCEL</a></li>
+                            <li><a href="#QLIK REGISTRATIONS">QLIK REGISTRATIONS</a></li>
+                            <li><a href="#INTRODUCTION TO QLIK">INTRODUCTION TO QLIK</a></li>
+                            <li><a href="#ELITE HACK CHALLENGE">ELITE HACK CHALLENGE</a></li>
+                            <li><a href="#DATA HACK HOURS">DATA HACK HOURS</a></li>
+                            <li><a href="#BIG QUERY WORKSSHOP">BIG QUERY WORKSSHOP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact-links">Contact Us</a></li>
+                    
+                    <li><a href="https://anurag.edu.in/">
+                        <img src="photos/anurag-logo.png" alt="Club Logo" class="au_logo"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br><br>
+    
+    <img src="photos/logo.jpg" alt="Club Logo" class="logo">
+</header>
+
+<input type="checkbox" class="menu-toggle-checkbox" id="menu-toggle">
+<label class="menu-toggle-label" for="menu-toggle">&#9776;</label>
+
+<nav class="navbar-mobile-custom">
+    <ul class="nav-list-custom">
+        <li><a href="#home" class="h-m">Home</a></li>
+        <li><a href="#About_Us" class="au-m">About Us</a></li>
+        <li><a href="#Faculty Co-ordinators" class="fc-m">Faculty Co-ordinators</a></li>
+        <li><a href="#Sr-Team" class="t-m">Team</a></li>
+        <li><a href="#Collaborations" class="co-m">Collaborations</a></li>
+        <li><a href="#Previous Events" class="pe-m">Previous Events</a></li>
+        <li><a href="#contact-links" class="cu-m">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Home Page Content -->
+<main id="home">
+    <div id="background"></div>
+
+    <!-- Brief Introduction -->
+    <section class="intro">
+        <br>
+        <h1>Welcome to Anurag University Data Analytics Club</h1>
+        <p>We are a community of passionate data enthusiasts dedicated to exploring the exciting world of data analytics and data science.</p>
+        <br>
+        <br>
+        <a href="#contact-links" class="cta-button">Join Us
+            <br>
+        </a>
+        <br>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <section id="About_Us">
+        <br>
+        <h2>Introduction to Data Analytics</h2>
+        <br>
+        <br>
+        <ul>
+            <li>At our club, we are dedicated to fostering career development and empowering students with the necessary skills and tools to excel in the world of data analytics. Our vision is to focus on career development and equip students with the right skills and tools that will enable them to develop or apply relevant analytics-driven solutions.</li>
+            <br>
+            
+            <li>Our mission is to train students on the basics of technical skills such as R, Python, QlikView, Tableau, and more, preparing them effectively for the analytics landscape in the business environment. </li>
+            <br>
+            
+            <li>At the Data Analytics Club, we offer a wide range of activities and events to keep our members engaged and excited about learning. From workshops on the latest data analysis tools to guest speakers from industry experience for everyone involved.
+            </li>
+            <br>
+            <br>
+        </ul>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- Testimonials -->
+    <section id="Faculty Co-ordinators">
+        <br>
+        <h2>Faculty Co-ordinators</h2>
+        <br>
+        <br>
+
+        <blockquote>
+            <img src="photos/FACULTY COORDINATORS/jyothi maam.jpg" alt="Faculty Co-ordinator 1" class="Faculty Co-ordinators">
+            <h4>Ms. B jyothi <br>Assistant Professor <br>Department of DS</h4>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="photos/FACULTY COORDINATORS/Dr. C. Dastagiraiah.jpg" alt="Faculty Co-ordinator 2" class="Faculty Co-ordinators">
+            <h4>Dr. C Dastagiraiah <br> Assistant Professor <br> Department of DS</h4>
+            <br>
+            
+        </blockquote>
+    </section>
+    <br>
+    <br>
+    <br>
+    
+
+   <!-- Call-to-Action -->
+<section id="Sr-Team">
+    <h2>Our Team</h2>
+
+    <div class="team-container">
+        <!-- President -->
+        <div class="team-row">
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0006.jpg" alt="President" class="sr-lead">
+                <h4>President</h4>
+            </div>
+        </div>
+
+        <!-- Vice Presidents -->
+        <div class="team-row">
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0004.jpg" alt="Vice President PR" class="sr-lead">
+                <h4>Vice President PR</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0005.jpg" alt="Vice President Education" class="sr-lead">
+                <h4>Vice President Education</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0007.jpg" alt="Vice President Membership" class="sr-lead">
+                <h4>Vice President Membership</h4>
+            </div>
+        </div>
+
+        <!-- Other Members -->
+        <div class="team-row">
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0008.jpg" alt="Secretary" class="sr-lead">
+                <h4>Secretary</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0009.jpg" alt="Treasurer" class="sr-lead">
+                <h4>Treasurer</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0010.jpg" alt="Organiser" class="sr-lead">
+                <h4>Organiser</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0012.jpg" alt="Organiser" class="sr-lead">
+                <h4>Organiser</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/IMG-20240323-WA0013.jpg" alt="Social Media" class="sr-lead">
+                <h4>Social Media</h4>
+            </div>
+            <div class="team-member">
+                <img src="photos/MEMBERS/WhatsApp Image 2024-03-23 at 18.11.11_7a9e23f6.jpg" alt="Social Media" class="sr-lead">
+                <h4>Social Media</h4>
+            </div>
+        </div>
+    </div>
+
+    <br>
+</section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    
+    <section id="Collaborations" class="qlillogo">
+        <img src="photos/COLLABORATIONS/Qlik/Qlik_Logo.png" alt="Qlik Logo">
+        <h2>Our Collaboration with Qlik Sense</h2>
+        <p>We are proud to announce our strategic collaboration with <strong>Qlik Sense</strong>. This partnership has enabled us to leverage the Qlik Cloud platform, offering enhanced data analytics capabilities and providing our clients with powerful insights.</p>
+        <p>Furthermore, we have taken steps to promote data literacy by enrolling in the <a href="https://www.qlik.com/us/learn/data-literacy" target="_blank">Data Literacy course</a> offered by Qlik. This initiative demonstrates our commitment to empowering our team and clients with the knowledge and skills required to make data-driven decisions.</p>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+
+
+    <section id="Previous Events">
+        <h2>Previous Events</h2>   <br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+   
+
+        <!-- Event: DATA NARRATIVES (2K23) -->
+        <section class="event-section" id="DATA NARRATIVES (2K23)">
+            <div class="event">
+                <h3>DATA NARRATIVES (2K23)</h3>
+                <img src="photos/EVENTS/DATA NARRATIVES (2K23)/WhatsApp Image 2024-03-23 at 18.30.13_0d53174d.jpg" alt="DATA NARRATIVES (2K23) Image 1">
+                <img src="photos/EVENTS/DATA NARRATIVES (2K23)/WhatsApp Image 2024-03-23 at 18.30.13_908dd97a.jpg" alt="DATA NARRATIVES (2K23) Image 2">
+                <img src="photos/EVENTS/DATA NARRATIVES (2K23)/WhatsApp Image 2024-03-23 at 18.30.14_ef75f2de.jpg" alt="DATA NARRATIVES (2K23) Image 3">
+                
+            </div>
+        </section>
+        <br><br><br>
+        <br>
+        <br>
+
+        <!-- Event: Tableau -->
+        <section class="event-section" id="Tableau">
+            <div class="event">
+                <h3>Tableau</h3>
+                <img src="photos/EVENTS/Tableau/1.jpg" alt="Tableau Image 1">
+                <img src="photos/EVENTS/Tableau/2.jpg" alt="Tableau Image 2">
+                <img src="photos/EVENTS/Tableau/3.jpg" alt="Tableau Image 3">
+                
+            </div>
+        </section>
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br>
+        <!-- Event: QLIK REGISTRATIONS -->
+        <section class="event-section" id="QLIK REGISTRATIONS">
+            <div class="event">
+                <h3>QLIK REGISTRATIONS</h3>
+                <img src="photos/EVENTS/QLIK REGISTRATIONS/WhatsApp Image 2024-03-23 at 18.26.19_837c3eb0.jpg" alt="QLIK REGISTRATIONS Image 1">
+                <img src="photos/EVENTS/QLIK REGISTRATIONS/WhatsApp Image 2024-03-23 at 18.26.20_98a6b8c4.jpg" alt="QLIK REGISTRATIONS Image 2">
+                <img src="photos/EVENTS/QLIK REGISTRATIONS/WhatsApp Image 2024-03-23 at 18.26.20_b21f09d0.jpg" alt="QLIK REGISTRATIONS Image 3">
+                
+            </div>
+        </section>
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br>
+        <!-- Event: INTRODUCTION TO QLIK -->
+        <section class="event-section" id="INTRODUCTION TO QLIK">
+            <div class="event">
+                <h3>INTRODUCTION TO QLIK</h3>
+                <img src="photos/EVENTS/INTRODUCTION TO QLIK/WhatsApp Image 2024-03-23 at 18.25.24_703b9ddc.jpg" alt="INTRODUCTION TO QLIK Image 1">
+                <img src="photos/EVENTS/INTRODUCTION TO QLIK/WhatsApp Image 2024-03-23 at 18.25.25_1836c75c.jpg" alt="INTRODUCTION TO QLIK Image 2">
+                <img src="photos/EVENTS/INTRODUCTION TO QLIK/WhatsApp Image 2024-03-23 at 18.25.25_2ad5c431.jpg" alt="INTRODUCTION TO QLIK Image 3">
+                
+            </div>
+        </section>
+        <br><br><br>
+        <br>
+        <br>
+
+        <!-- Event: Snowflake and Machine Learning Essentials -->
+
+        <section class="event-section" id="DATA NARRATIVES (2K23)">
+            <div class="event">
+                <h3>Snowflake and Machine Learning Essentials</h3>
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/1.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/2.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/3.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/4.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/5.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/6.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+                <img src="photos/EVENTS/Snowflake and Machine Learning Essentials/7.jpg" alt="Snowflake and Machine Learning Essentials Image 1">
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        
+        <br><br><br>
+        <br>
+        <br>
+        <!-- Event: WORKSHOP ON DATASCIENCE TOOLS AND EXCEL -->
+        <section class="event-section" id="WORKSHOP ON DATASCIENCE TOOLS AND EXCEL">
+            <div class="event">
+                <h3>WORKSHOP ON DATASCIENCE TOOLS AND EXCEL</h3>
+                <img src="photos/EVENTS/WORKSHOP ON DATASCIENCE TOOLS AND EXCEL/WhatsApp Image 2024-03-23 at 18.27.10_fc548692.jpg" alt="WORKSHOP ON DATASCIENCE TOOLS AND EXCEL Image 1">
+                <img src="photos/EVENTS/WORKSHOP ON DATASCIENCE TOOLS AND EXCEL/WhatsApp Image 2024-03-23 at 18.27.11_c2fe95ab.jpg" alt="WORKSHOP ON DATASCIENCE TOOLS AND EXCEL Image 2">
+                <img src="photos/EVENTS/WORKSHOP ON DATASCIENCE TOOLS AND EXCEL/WhatsApp Image 2024-03-23 at 18.27.11_cdea2ef0.jpg" alt="WORKSHOP ON DATASCIENCE TOOLS AND EXCEL Image 3">
+                
+            </div>
+        </section>
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br>
+        <!-- Event: BIG QUERY WORKSSHOP -->
+        <section class="event-section" id="BIG QUERY WORKSSHOP">
+            <div class="event">
+                <h3>BIG QUERY WORKSSHOP</h3>
+                <img src="photos/EVENTS/BIG QUERY WORKSSHOP/1.jpg" alt="BIG QUERY WORKSSHOP Image 1">
+                <img src="photos/EVENTS/BIG QUERY WORKSSHOP/2.jpg" alt="BIG QUERY WORKSSHOP Image 2">
+                <img src="photos/EVENTS/BIG QUERY WORKSSHOP/3.jpg" alt="BIG QUERY WORKSSHOP Image 3">
+                
+            </div>
+        </section>
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br>
+        <!-- Event: ELITE HACK CHALLENGE -->
+        <section class="event-section" id="ELITE HACK CHALLENGE">
+            <div class="event">
+                <h3>ELITE HACK CHALLENGE</h3>
+                <img src="photos/EVENTS/ELITE HACK CHALLENGE/WhatsApp Image 2024-03-23 at 18.27.45_6eb8413a.jpg" alt="ELITE HACK CHALLENGE Image 1">
+                <img src="photos/EVENTS/ELITE HACK CHALLENGE/WhatsApp Image 2024-03-23 at 18.27.46_c142d07c.jpg" alt="ELITE HACK CHALLENGE Image 2">
+                <img src="photos/EVENTS/ELITE HACK CHALLENGE/WhatsApp Image 2024-03-23 at 18.27.47_6b5e92dc.jpg" alt="ELITE HACK CHALLENGE Image 3">
+                <!-- Additional images for ELITE HACK CHALLENGE can be added similarly -->
+                
+            </div>
+        </section>
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br>
+        
+        <!-- Event: DATA HACK HOURS -->
+        <section class="event-section" id="DATA HACK HOURS">
+            <div class="event">
+                <h3>DATA HACK HOURS</h3>
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0035.jpg" alt="DATA HACK HOURS Image 1">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0037.jpg" alt="DATA HACK HOURS Image 2">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0038.jpg" alt="DATA HACK HOURS Image 3">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0039.jpg" alt="DATA HACK HOURS Image 4">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0040.jpg" alt="DATA HACK HOURS Image 5">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0041.jpg" alt="DATA HACK HOURS Image 6">
+                <img src="photos/EVENTS/DATA HACK HOURS/IMG-20240323-WA0042.jpg" alt="DATA HACK HOURS Image 7">
+                <!-- Additional images for DATA HACK HOURS can be added similarly -->
+                
+            </div>
+        </section>
+    </section>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    
+</main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content" id="contact-links">
+        <p>&copy; 2024 Anurag University Data Analytics Club. All rights reserved.</p><br>
+        <nav class="navbar1 ">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About us">About Us</a></li>
+                <li><a href="#Faculty Co-ordinators">Faculty Co-ordinators</a></li>
+                <li><a href="#Sr-Team">Team</a></li>
+                <li><a href="#Collaborations">Collaborations</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav><br>
+        <!-- Contact links for WhatsApp and Instagram -->
+        <div class="contact-links">
+            <a href="https://chat.whatsapp.com/BDNpotd4gSRHbWrDYI3YNY" target="_blank" rel="noopener noreferrer">WhatsApp</a><br><br>
+            <a href="https://www.instagram.com/au_dac?igsh=MTUyMmt4eGp5d244Ng==" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
