@@ -1107,3 +1107,8 @@ footer {
 .navbar-mobile-custom {
     transition: border-radius 0.5s ease, background-color 0.5s ease;
 }
+@media screen and (max-width:768px){
+ body{
+    font-size:20px
+  }
+}
