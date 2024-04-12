@@ -26,31 +26,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateGraphs() {
         scatterData.forEach(d => {
-            d.x += (Math.random() - 0.5) * 10;
-            d.y += (Math.random() - 0.5) * 10;
+            d.x += (Math.random() - 0.5) * 20;
+            d.y += (Math.random() - 0.5) * 20;
+            d.initialRadius = 3;
+            d.maxRadius = 25;
+            d.radius = d.initialRadius + (d.maxRadius - d.initialRadius) * 0.5 * (1 + Math.sin(Date.now() * 0.002)); // Use a sine function to create the pulsing effect
         });
-
+    
         const scatterCircles = svg.selectAll(".scatter-circle")
             .data(scatterData);
-
+    
         scatterCircles.enter()
             .append("circle")
             .attr("class", "scatter-circle")
             .attr("cx", d => d.x + "%")
             .attr("cy", d => d.y + "%")
-            .attr("r", d => Math.sqrt(d.value) + "px")
+            .attr("r", d => d.initialRadius + "px")
             .attr("fill", d => d.color)
             .attr("opacity", 0.6);
-
+    
         scatterCircles.transition()
             .duration(2000)
             .attr("cx", d => d.x + "%")
             .attr("cy", d => d.y + "%")
-            .attr("r", d => Math.sqrt(d.value) + "px")
+            .attr("r", d => d.radius + "px")  // Adjust the radius size
             .attr("fill", d => d.color);
-
+    
         scatterCircles.exit().remove();
-
+    
+        // ... rest of the code
+    
         pieData = [Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100];
 
         const pie = d3.pie();
@@ -69,7 +74,16 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("class", "pie-slice")
             .attr("d", pieArc)
             .attr("fill", d => `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`)
-            .attr("transform", d => `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`);
+            .attr("transform", d => `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`)
+            .transition()
+            .duration(2000)
+            .attr("d", d => {
+                const newOuterRadius = Math.random() * 100;
+                const newInnerRadius = Math.random() * newOuterRadius;
+                return d3.arc()
+                    .innerRadius(newInnerRadius)
+                    .outerRadius(newOuterRadius)(d);
+            });
 
         const bars = svg.selectAll(".bar")
             .data(barData);
@@ -112,18 +126,18 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("stroke-width", 2)
             .attr("d", line);
 
-// Dynamic Curvedness for Navigation
-const navItems = document.querySelectorAll('.nav-list-custom li a');
+        // Dynamic Curvedness for Navigation
+        const navItems = document.querySelectorAll('.nav-list-custom li a');
 
-navItems.forEach(item => {
-    item.addEventListener('click', function() {
         navItems.forEach(item => {
-            item.classList.remove('active');
-        });
+            item.addEventListener('click', function() {
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
 
-        this.classList.add('active');
-    });
-});
+                this.classList.add('active');
+            });
+        });
     }
 
     setInterval(updateGraphs, 2000);
